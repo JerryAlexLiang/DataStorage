@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    defaultConfig {
+        applicationId "com.crazypudding.greendaodemo"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+//add greenDAO configuration ---start//
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.1'
+    }
+}
+
+apply plugin: 'org.greenrobot.greendao'
+//add greenDAO configuration ---end//
+
+//configure the gradle plugin
+greendao {
+    schemaVersion 1
+    daoPackage 'com.crazypudding.greendaodemo.greendao.dao'
+    targetGenDir 'src/main/java'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+
+    //add greenDAO dependency
+    implementation 'org.greenrobot:greendao:3.2.0'
+
+    implementation 'com.android.support:appcompat-v7:25.1.0'
+    implementation 'com.android.support:design:25.1.0'
+    testImplementation 'junit:junit:4.12'
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_new_diary"
+        android:title="新建日记"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/action_open_file"
+        android:title="打开文件目录"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/action_clear_all_files"
+        android:title="清空所有缓存"
+        android:visible="true"/>
+
+</menu>

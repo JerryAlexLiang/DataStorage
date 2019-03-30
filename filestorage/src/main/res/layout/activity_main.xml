@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    tools:context="com.liangyang.filestorage01.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/bg03"
+                />
+
+            <Button
+                android:id="@+id/btn_mode_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="夜间白天模式切换" />
+
+            <Button
+                android:id="@+id/simulate_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="模拟登陆保存数据"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/simulate_diary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="文件存储模拟记事本"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

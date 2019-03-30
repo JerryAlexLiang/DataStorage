@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.liang.sharedpreferences02">
+
+    <!--注意：由于在ForceOfflineReceiver里弹出了一个系统级别的对话框
+        因此，必须声明android.permission.SYSTEM_ALERT_WINDOW权限-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SuccessActivity"/>
+
+        <!--注册广播，并指定它接收com.liang.sharedpreferences02.FORCE_OFFLINE这条广播-->
+        <receiver
+            android:name=".ForceOfflineReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <!--过滤器-->
+            <intent-filter>
+                <action android:name="com.liang.sharedpreferences02.FORCE_OFFLINE"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

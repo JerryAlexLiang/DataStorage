@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\MyCodeBase\\GreenDaoDemo\\refreshlib\\build\\intermediates\\res\\merged\\release\\anim\\slide_in_from_bottom.xml",
+        "source": "E:\\MyCodeBase\\GreenDaoDemo\\refreshlib\\src\\main\\res\\anim\\slide_in_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\MyCodeBase\\GreenDaoDemo\\refreshlib\\build\\intermediates\\res\\merged\\release\\anim\\slide_in_from_top.xml",
+        "source": "E:\\MyCodeBase\\GreenDaoDemo\\refreshlib\\src\\main\\res\\anim\\slide_in_from_top.xml"
+    },
+    {
+        "merged": "E:\\MyCodeBase\\GreenDaoDemo\\refreshlib\\build\\intermediates\\res\\merged\\release\\anim\\slide_out_to_bottom.xml",
+        "source": "E:\\MyCodeBase\\GreenDaoDemo\\refreshlib\\src\\main\\res\\anim\\slide_out_to_bottom.xml"
+    },
+    {
+        "merged": "E:\\MyCodeBase\\GreenDaoDemo\\refreshlib\\build\\intermediates\\res\\merged\\release\\anim\\slide_out_to_top.xml",
+        "source": "E:\\MyCodeBase\\GreenDaoDemo\\refreshlib\\src\\main\\res\\anim\\slide_out_to_top.xml"
+    }
+]

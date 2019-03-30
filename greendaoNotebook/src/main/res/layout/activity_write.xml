@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context="com.example.demo03.WriteActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="标题" />
+
+    <EditText
+        android:id="@+id/add_title_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/editbox_background"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="内容" />
+
+    <EditText
+        android:id="@+id/add_content_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入笔记内容"
+        android:gravity="start"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/editbox_background"
+        android:lines="10"
+        />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="提交" />
+
+
+</LinearLayout>

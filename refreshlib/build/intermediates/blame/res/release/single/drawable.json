@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\MyCodeBase\\GreenDaoDemo\\refreshlib\\build\\intermediates\\res\\merged\\release\\drawable\\indicator_bg_top.xml",
+        "source": "E:\\MyCodeBase\\GreenDaoDemo\\refreshlib\\src\\main\\res\\drawable\\indicator_bg_top.xml"
+    },
+    {
+        "merged": "E:\\MyCodeBase\\GreenDaoDemo\\refreshlib\\build\\intermediates\\res\\merged\\release\\drawable\\indicator_bg_bottom.xml",
+        "source": "E:\\MyCodeBase\\GreenDaoDemo\\refreshlib\\src\\main\\res\\drawable\\indicator_bg_bottom.xml"
+    }
+]

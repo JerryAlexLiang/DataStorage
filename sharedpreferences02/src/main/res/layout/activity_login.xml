@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.liang.sharedpreferences02.LoginActivity">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用户名："
+        android:background="@android:drawable/edit_text"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="请输入用户名"
+        android:layout_toRightOf="@id/tv_name"
+        android:layout_alignBottom="@id/tv_name"
+        android:background="@android:drawable/editbox_background"/>
+
+    <TextView
+        android:id="@+id/tv_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="密    码："
+        android:background="@android:drawable/edit_text"
+        android:gravity="center"
+        android:layout_below="@id/tv_name"/>
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="请输入密码"
+        android:inputType="numberPassword"
+        android:layout_toRightOf="@id/tv_password"
+        android:layout_alignBottom="@id/tv_password"
+        android:layout_below="@id/et_name"
+        android:background="@android:drawable/editbox_background"/>
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_password"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="saveData"
+            android:text="注册"
+            />
+
+        <Button
+            android:id="@+id/read_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="readData"
+            android:text="显示"
+            />
+
+        <Button
+            android:id="@+id/clear_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="clearData"
+            android:text="清除"
+            />
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="goToLogin"
+            android:text="登录"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_content_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_btn"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:background="@android:drawable/editbox_background"
+        android:hint="用户名信息"
+        />
+
+    <TextView
+        android:id="@+id/tv_content_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_content_name"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:background="@android:drawable/editbox_background"
+        android:hint="用户密码"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    tools:context="com.liangyang.filestorage01.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用户名："
+        android:background="@android:drawable/edit_text"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="请输入用户名"
+        android:layout_toRightOf="@id/tv_name"
+        android:layout_alignBottom="@id/tv_name"
+        android:background="@android:drawable/editbox_background"/>
+
+    <TextView
+        android:id="@+id/tv_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="密    码："
+        android:background="@android:drawable/edit_text"
+        android:gravity="center"
+        android:layout_below="@id/tv_name"/>
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="请输入密码"
+        android:inputType="numberPassword"
+        android:layout_toRightOf="@id/tv_password"
+        android:layout_alignBottom="@id/tv_password"
+        android:layout_below="@id/et_name"
+        android:background="@android:drawable/editbox_background"/>
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_password"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="保存数据"
+            />
+
+        <Button
+            android:id="@+id/read_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="读取数据"
+            />
+
+        <Button
+            android:id="@+id/clear_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="清除数据"
+            />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_btn"
+        android:gravity="clip_horizontal"
+        android:background="@android:drawable/editbox_background"
+        android:hint="文件存储方式显示读取信息"
+        />
+
+</RelativeLayout>
