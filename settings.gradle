@@ -1,1 +1,1 @@
-include ':app', ':filestorage', ':sharedpreferences', ':greendaoNotebook', ':greendaoNameList'
+include ':filestorage', ':sharedpreferences', ':greendaoNotebook', ':greendaoNameList'
