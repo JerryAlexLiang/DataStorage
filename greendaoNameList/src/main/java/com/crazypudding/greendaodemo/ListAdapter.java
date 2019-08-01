@@ -53,7 +53,8 @@ public class ListAdapter extends ArrayAdapter<Company> {
 
         Company employee = mData.get(position);
 
-        holder.idTextView.setText(String.format(Locale.US, "%d", employee.getId()));
+//        holder.idTextView.setText(String.format(Locale.US, "%d", employee.getId()));
+        holder.idTextView.setText("序号: " + (position + 1));
         holder.nameTextView.setText(employee.getName());
         holder.addressTextView.setText(String.valueOf(employee.getSalary()));
 

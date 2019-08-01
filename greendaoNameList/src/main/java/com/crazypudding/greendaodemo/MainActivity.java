@@ -22,11 +22,13 @@ import android.widget.Toast;
 
 import com.crazypudding.greendaodemo.greendao.dao.CompanyDao;
 import com.crazypudding.greendaodemo.greendao.dao.DaoSession;
+import com.google.gson.Gson;
 
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = MainActivity.class.getSimpleName();
     private ListView mListView;
     private ListAdapter mAdapter;
     private ListAdapter mQueryAdapter;
@@ -81,14 +83,14 @@ public class MainActivity extends AppCompatActivity {
     private void setupView() {
 
         if (mQueryList != null) {
-            System.out.println("=====>   1:   " + mQueryList.toString());
+            Log.d(TAG, "=====>   1:   mQueryList: " + new Gson().toJson(mQueryList));
         } else {
-            System.out.println("=====>   1:   " + "mQueryList为空！");
+            Log.d(TAG, "=====>   1:   mQueryList: " + "mQueryList为空！");
         }
         if (mEmployeeList != null) {
-            System.out.println("=====>   1:   " + mEmployeeList.toString());
+            Log.d(TAG, "=====>   1:   mEmployeeList: " + new Gson().toJson(mEmployeeList));
         } else {
-            System.out.println("=====>   1:   " + "mEmployeeList为空！");
+            Log.d(TAG, "=====>   1:   mEmployeeList: " + "mEmployeeList为空！");
         }
         //Set listView
         mListView = (ListView) findViewById(R.id.list_view);
@@ -104,12 +106,12 @@ public class MainActivity extends AppCompatActivity {
 //                showDeleteAlertDialog(mEmployeeList.get(i).getId());
                 if (mQueryList == null) {
                     showDeleteAlertDialog(mEmployeeList.get(i).getId());
-                    Log.d("TAG", "onItemClick:  当前列表点击item的ID为：   " + mEmployeeList.get(i).getId());
+                    Log.d(TAG, "onItemClick:  当前列表点击item的ID为：   " + mEmployeeList.get(i).getId()+ "    当前姓名：   " + mEmployeeList.get(i).getName());
                 } else if (mQueryList != null) {
                     Company company = mQueryList.get(i);
                     String name = company.getName();
                     Long queryId = company.getId();
-                    Log.d("TAG", "onItemClick:  当前查询列表点击item的ID为：   " + queryId + "    当前姓名：   " + name);
+                    Log.d(TAG, "onItemClick:  当前查询列表点击item的ID为：   " + queryId + "    当前姓名：   " + name);
                     showDeleteAlertDialog(queryId);
                 }
             }
@@ -264,14 +266,14 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 } else {
                     if (mQueryList != null) {
-                        System.out.println("=====>   2:   " + mQueryList.toString());
+                        Log.d(TAG, "=====>   2:   mQueryList: " + new Gson().toJson(mQueryList));
                     } else {
-                        System.out.println("=====>   2:   " + "mQueryList为空！");
+                        Log.d(TAG, "=====>   2:   mQueryList: " + "mQueryList为空！");
                     }
                     if (mEmployeeList != null) {
-                        System.out.println("=====>   2:   " + mEmployeeList.toString());
+                        Log.d(TAG, "=====>   2:   mEmployeeList: " + new Gson().toJson(mEmployeeList));
                     } else {
-                        System.out.println("=====>   2:   " + "mEmployeeList为空！");
+                        Log.d(TAG, "=====>   2:   mEmployeeList: " + "mEmployeeList为空！");
                     }
                     return false;
                 }

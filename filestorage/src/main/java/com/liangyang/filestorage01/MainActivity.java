@@ -116,7 +116,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             }else {
                 finish();
                 day();
-                System.exit(0);
+//                System.exit(0);
             }
             return true;
         }else if (KeyEvent.KEYCODE_HOME == keyCode){
