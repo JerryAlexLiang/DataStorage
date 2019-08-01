@@ -20,30 +20,38 @@ public class Diary {
     @NotNull
     private String title;
     private String content;
+
     @Generated(hash = 1387660138)
     public Diary(Long id, @NotNull String title, String content) {
         this.id = id;
         this.title = title;
         this.content = content;
     }
+
     @Generated(hash = 112123061)
     public Diary() {
     }
+
     public Long getId() {
         return this.id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getTitle() {
         return this.title;
     }
+
     public void setTitle(String title) {
         this.title = title;
     }
+
     public String getContent() {
         return this.content;
     }
+
     public void setContent(String content) {
         this.content = content;
     }

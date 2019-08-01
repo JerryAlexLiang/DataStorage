@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import com.example.demo03.adapter.MyAdapter;
 import com.example.demo03.bean.Diary;
 import com.example.demo03.util.DBUtils;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +26,7 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = MainActivity.class.getSimpleName();
     @BindView(R.id.btn_add)
     Button btnAdd;
     @BindView(R.id.list_view)
@@ -55,6 +58,12 @@ public class MainActivity extends AppCompatActivity {
     private void initData() {
         diaryList.clear();
         List<Diary> diaries = DBUtils.getDao(MainActivity.this).loadAll();
+//        List<Diary> list = DBUtils.getDao(this).queryBuilder().build().list();
+        List<Diary> list = DBUtils.getDao(this).queryBuilder().list();
+
+        Log.d(TAG, "读取数据库:  >>>" + "loadAll():   " + new Gson().toJson(diaries));
+        Log.d(TAG, "读取数据库:  >>>" + "queryBuilder():   " + new Gson().toJson(list));
+
         diaryList.addAll(diaries);
         adapter.notifyDataSetChanged();
     }
